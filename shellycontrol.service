@@ -1,0 +1,12 @@
+[Unit]
+Description=Control Shelly Plug
+After=network.target
+
+[Service]
+ExecStart=/bin/shellycontrol
+Restart=always
+RestartSec=5
+User=root
+
+[Install]
+WantedBy=multi-user.target
